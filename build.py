@@ -110,11 +110,14 @@ page("index.html",
  "Affordable Window Cleaning Sheffield | AWC Services – Commercial, Graffiti & Gutters",
  "AWC Services – affordable window cleaning in Sheffield, Rotherham & Chesterfield. Commercial window cleaning, graffiti removal and gutter cleaning & repair. Fully insured, free quotes.",
 f'''<section class="hero" style="background-image:url(images/commercial-glass-cherrypicker.jpg)"><div class="wrap">
+<div class="hero-grid"><div>
 <span class="tag">Sheffield • Rotherham • Chesterfield</span>
 <h1>Affordable Window Cleaning<br>for Homes &amp; Businesses</h1>
 <p>Welcome to AWC — your local Sheffield specialists in commercial window cleaning, graffiti removal and gutter cleaning &amp; repair. We live here, we work here, and we take pride in keeping our area looking its best.</p>
 <div class="ctas"><a class="btn btn-green" href="contact.html">Get a free quote</a><a class="btn btn-line" href="tel:{TEL}">Call {PHONE}</a></div>
-</div></section>
+</div>
+<div class="logo3d" id="logo3d"><img src="media/awc-logo-3d.png" alt="AWC – Affordable Window Cleaning" width="1500" height="1000" fetchpriority="high"><video id="l3-intro" muted playsinline preload="auto" aria-hidden="true"><source src="media/awc-logo-intro.webm" type="video/webm"></video><video id="l3-loop" muted playsinline loop preload="auto" aria-hidden="true"><source src="media/awc-logo-loop.webm" type="video/webm"></video></div>
+</div></div></section>
 {BADGES}
 <section><div class="wrap split">
 <div><h2>Sheffield's trusted window cleaning contractor</h2>
@@ -139,7 +142,8 @@ f'''<section class="hero" style="background-image:url(images/commercial-glass-ch
 <section class="soft"><div class="wrap"><h2>Why choose AWC?</h2>
 {tiles([("home","Local team","We live and work in the area we serve — not a national franchise."),("shield","Fully insured","Full liability insurance, so your property is protected."),("pound","Honest pricing","Clear, upfront quotes before we start. No hidden fees."),("ladder","Safe methods","Water-fed poles and high-reach vacuums mean fewer ladders against your building."),("bolt","Fast response","Quick turnaround, with same-day / next-day graffiti removal available."),("star","20+ years' experience","Trusted by homes, businesses and property managers across South Yorkshire.")])}
 </div></section>
-{band()}''')
+{band()}''',
+ extra_head='<script defer src="js/logo3d.js"></script>')
 
 # ---------------- COMMERCIAL ----------------
 page("commercial-window-cleaning.html",
