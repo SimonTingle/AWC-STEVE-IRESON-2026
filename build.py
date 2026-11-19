@@ -217,7 +217,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Gutter Cleaning &amp; Repair</h
 <p class="lead">AWC is your local expert for professional gutter cleaning, clearing and repairs across Sheffield, Rotherham &amp; Chesterfield.</p>
 <p>Our SkyVac high-reach vacuum system lets us clear gutters safely from the ground — no ladders against your home, no mess left behind. With the built-in camera we can show you before &amp; after photos, so you know the job's done properly.</p>
 <a class="btn btn-blue" href="contact.html">Get a free quote</a></div>
-<img src="images/skyvac-operator.jpg" alt="Operator using a SkyVac high-reach vacuum to clear gutters from the ground" loading="lazy" style="max-height:560px;width:auto;margin:0 auto">
+<div class="grid g2" style="gap:14px;align-items:center"><img src="images/skyvac-operator.jpg" alt="Operator using a SkyVac high-reach vacuum to clear gutters from the ground" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;width:100%"><img src="images/gutter-vac.jpg" alt="AWC using SkyVac to clean gutters on a block of flats" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;width:100%"></div>
 </div></section>
 <section class="soft"><div class="wrap"><h2>What we do</h2>
 <div class="grid g3">
