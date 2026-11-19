@@ -62,6 +62,7 @@ def page(fn, title, desc, body, extra_head=""):
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","name":"AWC Services","alternateName":"Affordable Window Cleaning","image":"{DOMAIN}/images/logo.jpg","telephone":"{TEL}","email":"{EMAIL}","url":"{DOMAIN}","areaServed":["Sheffield","Rotherham","Chesterfield"],"address":{{"@type":"PostalAddress","addressLocality":"Sheffield","addressCountry":"GB"}}}}</script>
+<script defer src="js/parallax.js"></script>
 {extra_head}
 </head>
 <body>
@@ -109,7 +110,7 @@ def ticks(xs): return '<ul class="ticks">' + "".join(f"<li>{x}</li>" for x in xs
 page("index.html",
  "Affordable Window Cleaning Sheffield | AWC Services – Commercial, Graffiti & Gutters",
  "AWC Services – affordable window cleaning in Sheffield, Rotherham & Chesterfield. Commercial window cleaning, graffiti removal and gutter cleaning & repair. Fully insured, free quotes.",
-f'''<section class="hero" style="background-image:url(images/commercial-glass-cherrypicker.jpg)"><div class="wrap">
+f'''<section class="hero"><div class="hero-bg" data-parallax><img src="images/commercial-glass-cherrypicker.jpg" alt="" fetchpriority="high"></div><div class="wrap">
 <div class="hero-grid"><div>
 <span class="tag">Sheffield • Rotherham • Chesterfield</span>
 <h1>Affordable Window Cleaning<br>for Homes &amp; Businesses</h1>
@@ -136,7 +137,7 @@ f'''<section class="hero" style="background-image:url(images/commercial-glass-ch
 </div></div></section>
 <section><div class="wrap">
 <h2>Graffiti gone — like it was never there</h2><p class="lead">Graffiti removal is our fastest-growing service. Here's a recent job on a Sheffield office building.</p>
-<div class="ba" style="margin-top:24px"><figure><img src="images/graffiti-office-before.jpg" alt="Office building covered in graffiti tags" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="images/graffiti-office-after.jpg" alt="Same office building after AWC graffiti removal" loading="lazy"><figcaption>After</figcaption></figure></div>
+<div class="ba" style="margin-top:24px"><figure><div class="px" data-parallax data-speed="0.05"><img src="images/graffiti-office-before.jpg" alt="Office building covered in graffiti tags" loading="lazy"></div><figcaption>Before</figcaption></figure><figure><div class="px" data-parallax data-speed="0.05"><img src="images/graffiti-office-after.jpg" alt="Same office building after AWC graffiti removal" loading="lazy"></div><figcaption>After</figcaption></figure></div>
 <p style="margin-top:20px"><a class="btn btn-blue" href="graffiti-removal.html">See graffiti removal</a></p>
 </div></section>
 <section class="soft"><div class="wrap"><h2>Why choose AWC?</h2>
@@ -177,7 +178,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Commercial Window Cleaning</h1>
 page("graffiti-removal.html",
  "Graffiti Removal Sheffield, Rotherham & Chesterfield | Fast & Safe | AWC Services",
  "Professional graffiti removal in Sheffield, Rotherham & Chesterfield. Same-day / next-day service, all surfaces, eco-friendly methods, anti-graffiti coatings. Fully insured, free quotes.",
-f'''<section class="hero" style="background-image:url(images/graffiti-pressure-wash.jpg);min-height:440px"><div class="wrap">
+f'''<section class="hero" style="min-height:440px"><div class="hero-bg" data-parallax><img src="images/graffiti-pressure-wash.jpg" alt="" fetchpriority="high"></div><div class="wrap">
 <span class="tag">Same-day / next-day service</span>
 <h1>Professional Graffiti Removal<br>You Can Trust</h1>
 <p>Fast, reliable graffiti cleaning across Sheffield, Rotherham &amp; Chesterfield. We restore your property to its original condition — no damage, no mess, no hassle.</p>
@@ -186,9 +187,9 @@ f'''<section class="hero" style="background-image:url(images/graffiti-pressure-w
 {BADGES}
 <section><div class="wrap">
 <h2>Real results</h2><p class="lead">Whether it's your shop front, wall, fence, garage or a public building — we remove unwanted spray paint, tags, stickers and fly-posters safely and efficiently.</p>
-<div class="ba" style="margin-top:24px"><figure><img src="images/graffiti-office-before.jpg" alt="Graffiti tags on office cladding and brick" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="images/graffiti-office-after.jpg" alt="Office cladding and brick after graffiti removal" loading="lazy"><figcaption>After</figcaption></figure></div>
+<div class="ba" style="margin-top:24px"><figure><div class="px" data-parallax data-speed="0.05"><img src="images/graffiti-office-before.jpg" alt="Graffiti tags on office cladding and brick" loading="lazy"></div><figcaption>Before</figcaption></figure><figure><div class="px" data-parallax data-speed="0.05"><img src="images/graffiti-office-after.jpg" alt="Office cladding and brick after graffiti removal" loading="lazy"></div><figcaption>After</figcaption></figure></div>
 <div class="split" style="margin-top:40px">
-<img src="images/graffiti-gable-before-after.jpg" alt="Gable end wall before and after graffiti removal" loading="lazy">
+<div class="px px-gable" data-parallax data-speed="0.05"><img src="images/graffiti-gable-before-after.jpg" alt="Gable end wall before and after graffiti removal" loading="lazy"></div>
 <div><h3>Gable end wall, Sheffield</h3><p>Heavy tagging on brickwork around a billboard, removed completely without damaging the brick or mortar.</p>
 <h2 style="margin-top:28px">What we offer</h2>
 {ticks(["<strong>Fast response</strong> — same-day / next-day service available","<strong>All surfaces covered</strong> — brick, stone, concrete, glass, metal, wood, uPVC &amp; more","<strong>Safe &amp; effective</strong> — environmentally friendly products, no harsh chemicals that damage your property","<strong>Fully insured</strong> — peace of mind for homes and businesses","<strong>Competitive pricing</strong> — clear, upfront quotes, no hidden fees","<strong>Local team</strong> — we live and work in the area we serve"])}
