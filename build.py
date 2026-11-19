@@ -1,7 +1,7 @@
 import os
 OUT = "/home/user/AWC-STEVE-IRESON-2026"
 # ---- PLACEHOLDERS: replace when Steve sends details ----
-PHONE = "07XXX XXXXXX"; TEL = "+447000000000"; WA = "447000000000"
+PHONE = "07830 116967"; TEL = "+447830116967"; WA = "447830116967"
 EMAIL = "info@example.com"; HOURS = "Mon–Sat: TBC"
 FB = "#"; IG = "#"; GB = "#"
 GA_ID = "G-XXXXXXXXXX"; FORM_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"
