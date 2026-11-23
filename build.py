@@ -78,7 +78,7 @@ def page(fn, title, desc, body, extra_head=""):
 </main>
 <footer><div class="wrap">
 <div class="grid">
-<div><h3>AWC Services</h3><p>Affordable window cleaning, graffiti removal and gutter cleaning &amp; repair for homes and businesses across Sheffield, Rotherham &amp; Chesterfield. Local, family-run and fully insured.</p></div>
+<div><h3>AWC Services</h3><p>Affordable commercial window cleaning, graffiti removal and gutter cleaning &amp; repair across Sheffield, Rotherham &amp; Chesterfield. Local, family-run and fully insured.</p></div>
 <div><h3>Services</h3><ul>{"".join(f'<li><a href="{h}">{t}</a></li>' for h,t in NAV[1:4])}</ul></div>
 <div><h3>Contact</h3><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="https://wa.me/{WA}">WhatsApp us</a></li><li>{HOURS}</li><li>{ADDR}</li></ul></div>
 </div>
@@ -114,7 +114,7 @@ page("index.html",
 f'''<section class="hero"><div class="hero-bg" data-parallax><img src="images/commercial-glass-cherrypicker.jpg" alt="" fetchpriority="high"></div><div class="wrap">
 <div class="hero-grid"><div>
 <span class="tag">Sheffield • Rotherham • Chesterfield</span>
-<h1>Affordable Window Cleaning<br>for Homes &amp; Businesses</h1>
+<h1>Affordable Commercial<br>Window Cleaning</h1>
 <p>Welcome to AWC — your local Sheffield specialists in commercial window cleaning, graffiti removal and gutter cleaning &amp; repair. We live here, we work here, and we take pride in keeping our area looking its best.</p>
 <div class="ctas"><a class="btn btn-green" href="contact.html">Get a free quote</a><a class="btn btn-line" href="tel:{TEL}">Call {PHONE}</a></div>
 </div>
@@ -123,7 +123,7 @@ f'''<section class="hero"><div class="hero-bg" data-parallax><img src="images/co
 {BADGES}
 <section><div class="wrap split">
 <div><h2>Sheffield's trusted window cleaning contractor</h2>
-<p class="lead">AWC has become one of Sheffield's leading commercial and high-end residential window cleaning contractors. Our contracts range from small residential blocks to large commercial, high-rise office buildings in Sheffield city centre and the surrounding areas.</p>
+<p class="lead">AWC has become one of Sheffield's leading commercial window cleaning contractors. Our contracts range from small residential blocks to large commercial, high-rise office buildings in Sheffield city centre and the surrounding areas.</p>
 <p>With the latest high-level Reach &amp; Wash water-fed pole equipment, fully trained staff, committed management and an impeccable safety record, AWC guarantees a cost-effective solution to any cleaning task.</p>
 <p><strong>Call today to arrange a free quotation and on-site survey.</strong></p>
 <a class="btn btn-blue" href="commercial-window-cleaning.html">Commercial window cleaning</a></div>
@@ -167,7 +167,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Commercial Window Cleaning</h1>
 <img src="images/commercial-glass-cherrypicker.jpg" alt="AWC cleaning a large glass building facade" loading="lazy">
 <div><h2>What's included</h2>
 {ticks(["Windows, frames and sills cleaned","Pure-water system — no streaks, no chemicals","Weekly, fortnightly, monthly or one-off visits","Work scheduled around your opening hours","Fully trained staff and impeccable safety record","Full liability insurance","Clear, fixed quotes — no hidden fees"])}
-<p style="margin-top:18px"><strong>Residential too:</strong> we also clean high-end homes and residential properties — just ask.</p>
+
 </div></div></section>
 <section class="soft"><div class="wrap"><h2>Also need&hellip;</h2>
 <div class="grid g2"><div class="tile"><div class="icon">{ic("spray")}</div><h3>Graffiti removal</h3><p>Tags on your building? We remove them fast without damaging surfaces. <a href="graffiti-removal.html">Learn more</a></p></div>
@@ -255,7 +255,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Get a Free Quote</h1><p>Call, W
 <input type="checkbox" name="botcheck" style="display:none">
 <div class="row2"><label>Name<input name="name" required autocomplete="name"></label><label>Phone<input name="phone" type="tel" required autocomplete="tel"></label></div>
 <label>Email<input name="email" type="email" required autocomplete="email"></label>
-<div class="row2"><label>Service<select name="service" required><option value="">Choose…</option><option>Commercial window cleaning</option><option>Residential window cleaning</option><option>Graffiti removal</option><option>Gutter cleaning</option><option>Gutter repair / guards</option><option>Other</option></select></label>
+<div class="row2"><label>Service<select name="service" required><option value="">Choose…</option><option>Commercial window cleaning</option><option>Graffiti removal</option><option>Gutter cleaning</option><option>Gutter repair / guards</option><option>Other</option></select></label>
 <label>Postcode<input name="postcode" autocomplete="postal-code"></label></div>
 <label>Address (optional)<input name="address" autocomplete="street-address"></label>
 <label>Details<textarea name="message" rows="5" placeholder="Tell us about the job…"></textarea></label>
