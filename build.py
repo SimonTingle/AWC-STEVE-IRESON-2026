@@ -2,7 +2,10 @@ import os
 OUT = "/home/user/AWC-STEVE-IRESON-2026"
 # ---- PLACEHOLDERS: replace when Steve sends details ----
 PHONE = "07830 116967"; TEL = "+447830116967"; WA = "447830116967"
-EMAIL = "srireson@yahoo.co.uk"; HOURS = "Open 7am – 3pm"
+EMAIL = "srireson@yahoo.co.uk";
+EU, ED = EMAIL.split("@")
+EM = f'<a class="em" data-u="{EU}" data-d="{ED}" href="contact.html">{EU} [at] {ED}</a>'  # assembled by JS to deter scrapers
+HOURS = "Open 7am – 3pm"
 ADDR = "46 Cobnar Road, Sheffield, S8 8QB"
 FB = "#"; IG = "#"; GB = "#"
 GA_ID = "G-XXXXXXXXXX"; FORM_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"
@@ -62,7 +65,7 @@ def page(fn, title, desc, body, extra_head=""):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","name":"AWC Services","alternateName":"Affordable Window Cleaning","image":"{DOMAIN}/images/logo.jpg","telephone":"{TEL}","email":"{EMAIL}","url":"{DOMAIN}","areaServed":["Sheffield","Rotherham","Chesterfield"],"address":{{"@type":"PostalAddress","streetAddress":"46 Cobnar Road","addressLocality":"Sheffield","postalCode":"S8 8QB","addressCountry":"GB"}},"openingHours":"07:00-15:00"}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","name":"AWC Services","alternateName":"Affordable Window Cleaning","image":"{DOMAIN}/images/logo.jpg","telephone":"{TEL}","url":"{DOMAIN}","areaServed":["Sheffield","Rotherham","Chesterfield"],"address":{{"@type":"PostalAddress","streetAddress":"46 Cobnar Road","addressLocality":"Sheffield","postalCode":"S8 8QB","addressCountry":"GB"}},"openingHours":"07:00-15:00"}}</script>
 <script defer src="js/parallax.js"></script>
 {extra_head}
 </head>
@@ -80,7 +83,7 @@ def page(fn, title, desc, body, extra_head=""):
 <div class="grid">
 <div><h3>AWC Services</h3><p>Affordable commercial window cleaning, graffiti removal and gutter cleaning &amp; repair across Sheffield, Rotherham &amp; Chesterfield. Local, family-run and fully insured.</p></div>
 <div><h3>Services</h3><ul>{"".join(f'<li><a href="{h}">{t}</a></li>' for h,t in NAV[1:4])}</ul></div>
-<div><h3>Contact</h3><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="https://wa.me/{WA}">WhatsApp us</a></li><li>{HOURS}</li><li>{ADDR}</li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li>{EM}</li><li><a href="https://wa.me/{WA}">WhatsApp us</a></li><li>{HOURS}</li><li>{ADDR}</li></ul></div>
 </div>
 <div class="copy">&copy; <span id="yr">2026</span> AWC Services · Sheffield · Rotherham · Chesterfield · <a href="privacy.html">Privacy &amp; Cookies</a></div>
 </div></footer>
@@ -89,6 +92,7 @@ def page(fn, title, desc, body, extra_head=""):
 <div class="cookie" id="cookie"><strong>Cookies</strong><p style="margin:.3em 0">We use Google Analytics cookies to see how our site is used. <a href="privacy.html">More info</a></p><div class="ctas"><button class="btn btn-blue" onclick="ck('y')">Accept</button><button class="btn" style="background:#eef2f8" onclick="ck('n')">Decline</button></div></div>
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('a.em').forEach(function(a){{var e=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+e;a.textContent=e;}});
 function ga(){{var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id={GA_ID}';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){{dataLayer.push(arguments)}};gtag('js',new Date());gtag('config','{GA_ID}');}}
 function ck(v){{try{{localStorage.setItem('awc-ck',v)}}catch(e){{}}document.getElementById('cookie').style.display='none';if(v=='y')ga();}}
 (function(){{var v=null;try{{v=localStorage.getItem('awc-ck')}}catch(e){{}}if(v=='y')ga();else if(!v)document.getElementById('cookie').style.display='block';}})();
@@ -242,7 +246,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Get a Free Quote</h1><p>Call, W
 <ul class="contact-list">
 <li><strong>Phone:</strong> <a href="tel:{TEL}">{PHONE}</a></li>
 <li><strong>WhatsApp photos to Stephen Ireson</strong> for a fast quote: <a href="https://wa.me/{WA}">message on WhatsApp</a></li>
-<li><strong>Email:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a></li>
+<li><strong>Email:</strong> {EM}</li>
 <li><strong>Hours:</strong> {HOURS}</li>
 <li><strong>Office:</strong> {ADDR}</li>
 <li><strong>Areas covered:</strong> Sheffield, Rotherham, Chesterfield &amp; surrounding areas</li>
@@ -269,7 +273,7 @@ f'''<div class="page-head"><div class="wrap"><h1>Get a Free Quote</h1><p>Call, W
 page("privacy.html", "Privacy & Cookies | AWC Services", "Privacy and cookie policy for AWC Services.",
 f'''<div class="page-head"><div class="wrap"><h1>Privacy &amp; Cookies</h1></div></div>
 <section><div class="wrap" style="max-width:800px">
-<h2>Who we are</h2><p>AWC Services provides window cleaning, graffiti removal and gutter services in Sheffield, Rotherham and Chesterfield. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+<h2>Who we are</h2><p>AWC Services provides window cleaning, graffiti removal and gutter services in Sheffield, Rotherham and Chesterfield. Contact: {EM}.</p>
 <h2>What we collect</h2><p>When you use our contact form we collect your name, phone, email, address/postcode, message and any photo you attach. We use this only to respond to your enquiry and provide a quote. Form submissions are delivered to us by email via Web3Forms.</p>
 <h2>How long we keep it</h2><p>We keep enquiry details only as long as needed to deal with your request and any resulting work, then delete them.</p>
 <h2>Cookies</h2><p>With your consent, we use Google Analytics cookies to understand how visitors use our site. No analytics cookies are set unless you click Accept. You can change your choice by clearing your browser's site data.</p>

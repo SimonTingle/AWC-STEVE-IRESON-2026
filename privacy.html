@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"AWC Services","alternateName":"Affordable Window Cleaning","image":"https://www.a-w-c.co.uk/images/logo.jpg","telephone":"+447830116967","email":"srireson@yahoo.co.uk","url":"https://www.a-w-c.co.uk","areaServed":["Sheffield","Rotherham","Chesterfield"],"address":{"@type":"PostalAddress","streetAddress":"46 Cobnar Road","addressLocality":"Sheffield","postalCode":"S8 8QB","addressCountry":"GB"},"openingHours":"07:00-15:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"AWC Services","alternateName":"Affordable Window Cleaning","image":"https://www.a-w-c.co.uk/images/logo.jpg","telephone":"+447830116967","url":"https://www.a-w-c.co.uk","areaServed":["Sheffield","Rotherham","Chesterfield"],"address":{"@type":"PostalAddress","streetAddress":"46 Cobnar Road","addressLocality":"Sheffield","postalCode":"S8 8QB","addressCountry":"GB"},"openingHours":"07:00-15:00"}</script>
 <script defer src="js/parallax.js"></script>
 
 </head>
@@ -25,7 +25,7 @@
 <main>
 <div class="page-head"><div class="wrap"><h1>Privacy &amp; Cookies</h1></div></div>
 <section><div class="wrap" style="max-width:800px">
-<h2>Who we are</h2><p>AWC Services provides window cleaning, graffiti removal and gutter services in Sheffield, Rotherham and Chesterfield. Contact: <a href="mailto:srireson@yahoo.co.uk">srireson@yahoo.co.uk</a>.</p>
+<h2>Who we are</h2><p>AWC Services provides window cleaning, graffiti removal and gutter services in Sheffield, Rotherham and Chesterfield. Contact: <a class="em" data-u="srireson" data-d="yahoo.co.uk" href="contact.html">srireson [at] yahoo.co.uk</a>.</p>
 <h2>What we collect</h2><p>When you use our contact form we collect your name, phone, email, address/postcode, message and any photo you attach. We use this only to respond to your enquiry and provide a quote. Form submissions are delivered to us by email via Web3Forms.</p>
 <h2>How long we keep it</h2><p>We keep enquiry details only as long as needed to deal with your request and any resulting work, then delete them.</p>
 <h2>Cookies</h2><p>With your consent, we use Google Analytics cookies to understand how visitors use our site. No analytics cookies are set unless you click Accept. You can change your choice by clearing your browser's site data.</p>
@@ -36,7 +36,7 @@
 <div class="grid">
 <div><h3>AWC Services</h3><p>Affordable commercial window cleaning, graffiti removal and gutter cleaning &amp; repair across Sheffield, Rotherham &amp; Chesterfield. Local, family-run and fully insured.</p></div>
 <div><h3>Services</h3><ul><li><a href="commercial-window-cleaning.html">Commercial Window Cleaning</a></li><li><a href="graffiti-removal.html">Graffiti Removal</a></li><li><a href="gutter-cleaning.html">Gutter Cleaning & Repair</a></li></ul></div>
-<div><h3>Contact</h3><ul><li><a href="tel:+447830116967">07830 116967</a></li><li><a href="mailto:srireson@yahoo.co.uk">srireson@yahoo.co.uk</a></li><li><a href="https://wa.me/447830116967">WhatsApp us</a></li><li>Open 7am – 3pm</li><li>46 Cobnar Road, Sheffield, S8 8QB</li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="tel:+447830116967">07830 116967</a></li><li><a class="em" data-u="srireson" data-d="yahoo.co.uk" href="contact.html">srireson [at] yahoo.co.uk</a></li><li><a href="https://wa.me/447830116967">WhatsApp us</a></li><li>Open 7am – 3pm</li><li>46 Cobnar Road, Sheffield, S8 8QB</li></ul></div>
 </div>
 <div class="copy">&copy; <span id="yr">2026</span> AWC Services · Sheffield · Rotherham · Chesterfield · <a href="privacy.html">Privacy &amp; Cookies</a></div>
 </div></footer>
@@ -45,6 +45,7 @@
 <div class="cookie" id="cookie"><strong>Cookies</strong><p style="margin:.3em 0">We use Google Analytics cookies to see how our site is used. <a href="privacy.html">More info</a></p><div class="ctas"><button class="btn btn-blue" onclick="ck('y')">Accept</button><button class="btn" style="background:#eef2f8" onclick="ck('n')">Decline</button></div></div>
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('a.em').forEach(function(a){var e=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+e;a.textContent=e;});
 function ga(){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXXX');}
 function ck(v){try{localStorage.setItem('awc-ck',v)}catch(e){}document.getElementById('cookie').style.display='none';if(v=='y')ga();}
 (function(){var v=null;try{v=localStorage.getItem('awc-ck')}catch(e){}if(v=='y')ga();else if(!v)document.getElementById('cookie').style.display='block';})();
